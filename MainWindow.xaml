@@ -1,0 +1,12 @@
+﻿<Window x:Class="PlusBin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Plus Bin" Height="500" Width="700"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize"
+        Background="#1e1e1e">
+    
+    <Grid>
+        <ContentControl x:Name="MainContent" />
+    </Grid>
+</Window>

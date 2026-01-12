@@ -1,0 +1,104 @@
+<UserControl x:Class="PlusBin.Views.AddProductView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#1e1e1e">
+    <Grid>
+        <Border Width="500" Height="420"
+                Background="#252526"
+                CornerRadius="12"
+                Padding="25">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="TitleText"
+                           Text="YENİ ÜRÜN EKLE"
+                           Foreground="White"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,16"/>
+
+                <TextBlock Text="Ürün Adı" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,4"/>
+                <TextBox x:Name="ProductNameBox"
+                         Height="36"
+                         FontSize="14"
+                         FontWeight="Bold"
+                         Background="#333333"
+                         Foreground="White"
+                         BorderBrush="#555555"
+                         BorderThickness="1"
+                         Padding="10,8"
+                         Margin="0,0,0,12"/>
+
+                <TextBlock Text="Maliyet (₺)" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,4"/>
+                <TextBox x:Name="CostBox"
+                         Height="36"
+                         FontSize="14"
+                         FontWeight="Bold"
+                         Background="#333333"
+                         Foreground="White"
+                         BorderBrush="#555555"
+                         BorderThickness="1"
+                         Padding="10,8"
+                         TextChanged="OnCostOrSellChanged"
+                         Margin="0,0,0,12"/>
+
+                <TextBlock Text="Satış Fiyatı (₺)" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,4"/>
+                <TextBox x:Name="SellBox"
+                         Height="36"
+                         FontSize="14"
+                         FontWeight="Bold"
+                         Background="#333333"
+                         Foreground="White"
+                         BorderBrush="#555555"
+                         BorderThickness="1"
+                         Padding="10,8"
+                         TextChanged="OnCostOrSellChanged"
+                         Margin="0,0,0,12"/>
+
+                <TextBlock Text="Kar Oranı" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,4"/>
+                <TextBox x:Name="ProfitBox"
+                         Height="36"
+                         FontSize="14"
+                         FontWeight="Bold"
+                         Background="#333333"
+                         Foreground="#88CC88"
+                         IsReadOnly="True"
+                         BorderBrush="#555555"
+                         BorderThickness="1"
+                         Padding="10,8"
+                         Margin="0,0,0,16"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,16,0,0">
+                    <Button x:Name="SaveButton"
+                            Content="Kaydet"
+                            Width="120"
+                            Height="36"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Background="#FF8C00"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Margin="0,0,12,0"/>
+                    <Button x:Name="CancelButton"
+                            Content="İptal"
+                            Width="120"
+                            Height="36"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Background="#555555"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Cursor="Hand"/>
+                </StackPanel>
+
+                <TextBlock x:Name="ErrorMessage"
+                           Foreground="#FF5555"
+                           FontSize="12"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Text=""
+                           Visibility="Collapsed"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
